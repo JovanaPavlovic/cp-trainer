@@ -16,8 +16,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-800/80 to-gray-900/90" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white mb-20">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 mt-40 leading-tight">
           Precision Strenght Testing
           <div className="text-4xl md:text-4xl flex py-6 gap-6 justify-center">
             <span className="block text-emerald-400">Anywhere</span>
