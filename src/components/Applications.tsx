@@ -1,10 +1,6 @@
 import {
-  Users,
-  Activity,
   Stethoscope,
-  Trophy,
   Microscope,
-  Compass,
   ActivityIcon,
   Handshake,
   GraduationCap,

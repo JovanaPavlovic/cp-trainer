@@ -1,10 +1,4 @@
 import {
-  Zap,
-  Wifi,
-  Settings,
-  Shield,
-  Battery,
-  Smartphone,
   Puzzle,
   HardHat,
   FileText,

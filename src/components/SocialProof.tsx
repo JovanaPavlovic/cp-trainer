@@ -8,29 +8,29 @@ import {
 } from "lucide-react";
 
 const SocialProof = () => {
-  const testimonials = [
-    {
-      quote:
-        "The CP Trainer has revolutionized our rehabilitation protocols. The accuracy and portability allow us to conduct assessments that were previously impossible.",
-      author: "Dr. Sarah Mitchell",
-      title: "Head of Physical Therapy",
-      organization: "Munich Sports Medicine Center",
-    },
-    {
-      quote:
-        "Exceptional build quality and precision. We've integrated it into our research protocols with remarkable results in data consistency.",
-      author: "Prof. Andreas Weber",
-      title: "Biomechanics Researcher",
-      organization: "Technical University of Berlin",
-    },
-    {
-      quote:
-        "Game-changing technology for sports performance assessment. Our athletes love the immediate feedback and coaches appreciate the detailed analytics.",
-      author: "Marco Rossi",
-      title: "Performance Director",
-      organization: "Elite Training Academy",
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     quote:
+  //       "The CP Trainer has revolutionized our rehabilitation protocols. The accuracy and portability allow us to conduct assessments that were previously impossible.",
+  //     author: "Dr. Sarah Mitchell",
+  //     title: "Head of Physical Therapy",
+  //     organization: "Munich Sports Medicine Center",
+  //   },
+  //   {
+  //     quote:
+  //       "Exceptional build quality and precision. We've integrated it into our research protocols with remarkable results in data consistency.",
+  //     author: "Prof. Andreas Weber",
+  //     title: "Biomechanics Researcher",
+  //     organization: "Technical University of Berlin",
+  //   },
+  //   {
+  //     quote:
+  //       "Game-changing technology for sports performance assessment. Our athletes love the immediate feedback and coaches appreciate the detailed analytics.",
+  //     author: "Marco Rossi",
+  //     title: "Performance Director",
+  //     organization: "Elite Training Academy",
+  //   },
+  // ];
 
   const certifications = [
     {
@@ -55,16 +55,19 @@ const SocialProof = () => {
     },
   ];
 
-  const stats = [
-    { number: "500+", label: "Healthcare Facilities" },
-    { number: "50+", label: "Research Institutions" },
-    { number: "25", label: "Countries Served" },
-    { number: "99.8%", label: "Uptime Reliability" },
-  ];
+  // const stats = [
+  //   { number: "500+", label: "Healthcare Facilities" },
+  //   { number: "50+", label: "Research Institutions" },
+  //   { number: "25", label: "Countries Served" },
+  //   { number: "99.8%", label: "Uptime Reliability" },
+  // ];
 
   return (
     <section className="py-20 bg-gray-900">
-      <div className="max-w-6xl lg:max-w-full mx-auto px-5 lg:px-20" id="localization">
+      <div
+        className="max-w-6xl lg:max-w-full mx-auto px-5 lg:px-20"
+        id="localization"
+      >
         {/* Stats */}
         {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
@@ -132,7 +135,9 @@ const SocialProof = () => {
                 key={index}
                 className="bg-gray-800/30 p-4 rounded-lg border border-gray-700 text-gray-300 font-medium flex items-center gap-6"
               >
-                {cert?.icon && <cert.icon className="text-yellow-400" size={38}/>}
+                {cert?.icon && (
+                  <cert.icon className="text-yellow-400" size={38} />
+                )}
                 {cert?.title}
               </div>
             ))}

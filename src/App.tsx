@@ -5,7 +5,7 @@ import Hero from "./components/HeroSection";
 import ProblemSolution from "./components/ProblemSolution";
 import Applications from "./components/Applications";
 import TechnicalOverview from "./components/TechnicalOverview";
-import EULocalization from "./components/EULocalization";
+// import EULocalization from "./components/EULocalization";
 import SocialProof from "./components/SocialProof";
 import FAQ from "./components/FAQ";
 
