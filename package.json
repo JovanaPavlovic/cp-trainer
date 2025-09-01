@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://deuterium-cloud.github.com/cp-trainer/",
+  "homepage": "https://JovanaPavlovic.github.com/cp-trainer/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
