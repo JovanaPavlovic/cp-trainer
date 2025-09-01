@@ -8,7 +8,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            'url("https://images.pexels.com/photos/3912952/pexels-photo-3912952.jpeg?_gl=1*zdrlak*_ga*MTQ2MjM2NTkyLjE3NTY2NTkwNjU.*_ga_8JE65Q40S6*czE3NTY2NTkwNjUkbzEkZzEkdDE3NTY2NTkyMjUkajU0JGwwJGgw")',
+            'url("https://cdn.dribbble.com/userupload/43564359/file/original-4de1093aea546fc123c3ca03e56512a2.png?resize=2400x1800&vertical=center")',
         }}
       />
 
@@ -20,8 +20,8 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-6 mt-40 leading-tight">
           Precision Strenght Testing
           <div className="text-4xl md:text-4xl flex py-6 gap-6 justify-center">
-            <span className="block text-emerald-400">Anywhere</span>
-            <span className="block text-yellow-400">Anytime</span>
+            <span className="block text-red-800">Anywhere</span>
+            <span className="block text-yellow-600">Anytime</span>
           </div>
         </h1>
 
@@ -34,7 +34,7 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button className="bg-red-800 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
             Get Pricing & Info
           </button>
           {/* <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
@@ -44,17 +44,17 @@ const Hero = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="text-3xl font-bold text-emerald-400 mb-2">
+            <div className="text-3xl font-bold text-red-800 mb-2">
               ±0.1%
             </div>
             <div className="text-gray-300">Measurement Accuracy</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-400 mb-2">2000N</div>
+            <div className="text-3xl font-bold text-yellow-600 mb-2">2000N</div>
             <div className="text-gray-300">Maximum Force</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-emerald-400 mb-2">500g</div>
+            <div className="text-3xl font-bold text-red-800 mb-2">500g</div>
             <div className="text-gray-300">Device Weight</div>
           </div>
         </div>

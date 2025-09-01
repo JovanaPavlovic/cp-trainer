@@ -31,13 +31,13 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-800" id="faq">
+    <section className="py-20 bg-gray-950 opacity-95" id="faq">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl text-white">
             Get answers to common questions about the CP Trainer system
           </p>
         </div>
@@ -46,7 +46,7 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-900/50 rounded-xl border border-gray-700 overflow-hidden hover:border-emerald-500/30 transition-all duration-300"
+              className="bg-gray-900/50 rounded-xl border border-gray-900 overflow-hidden hover:border-red-800/30 transition-all duration-300"
             >
               <button
                 className="w-full p-6 text-left flex justify-between items-center focus:outline-none"
@@ -57,9 +57,9 @@ const FAQ = () => {
                 </h3>
                 <div className="flex-shrink-0">
                   {openIndex === index ? (
-                    <ChevronUp className="text-emerald-400" size={24} />
+                    <ChevronUp className="text-red-800" size={24} />
                   ) : (
-                    <ChevronDown className="text-gray-400" size={24} />
+                    <ChevronDown className="text-white" size={24} />
                   )}
                 </div>
               </button>
@@ -72,7 +72,7 @@ const FAQ = () => {
                 } overflow-hidden`}
               >
                 <div className="px-6 pb-6">
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                  <p className="text-white leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             </div>
@@ -80,10 +80,10 @@ const FAQ = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-300 mb-6">
+          <p className="text-white mb-6">
             Still have questions? Our technical team is here to help.
           </p>
-          <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+          <button className="bg-red-800 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
             Contact Technical Support
           </button>
         </div>

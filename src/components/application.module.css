@@ -2,5 +2,5 @@
 
 .container {
     @apply flex flex-col items-center justify-center min-w-full;
-    @apply py-20 bg-gray-800;
+    @apply py-20 bg-gray-950;
 }

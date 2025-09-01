@@ -3,25 +3,25 @@ import { MapPin, Shield, FileText, Truck } from "lucide-react";
 const EULocalization = () => {
   const euBenefits = [
     {
-      icon: <Shield className="text-emerald-400" size={32} />,
+      icon: <Shield className="text-red-800" size={32} />,
       title: "EU MDR Compliance",
       description:
         "Fully compliant with European Medical Device Regulation for clinical applications",
     },
     {
-      icon: <FileText className="text-yellow-400" size={32} />,
+      icon: <FileText className="text-red-800" size={32} />,
       title: "GDPR Data Protection",
       description:
         "Complete data privacy compliance with secure EU-based data processing",
     },
     {
-      icon: <Truck className="text-emerald-400" size={32} />,
+      icon: <Truck className="text-red-800" size={32} />,
       title: "Local Support & Service",
       description:
         "European headquarters in Germany with multilingual technical support",
     },
     {
-      icon: <MapPin className="text-yellow-400" size={32} />,
+      icon: <MapPin className="text-red-800" size={32} />,
       title: "Regional Partnerships",
       description:
         "Authorized distributors across EU member states for local service",
