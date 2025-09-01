@@ -63,7 +63,7 @@ const SocialProof = () => {
   // ];
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-gray-950">
       <div
         className="max-w-6xl lg:max-w-full mx-auto px-5 lg:px-20"
         id="localization"
@@ -125,7 +125,7 @@ const SocialProof = () => {
         {/* Certifications */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-8 flex items-center justify-center gap-3">
-            <Globe className="text-emerald-400" size={48} />
+            <Globe className="text-yellow-600" size={32} />
             EU-Focused Localization
           </h3>
 
@@ -136,7 +136,9 @@ const SocialProof = () => {
                 className="bg-gray-800/30 p-4 rounded-lg border border-gray-700 text-gray-300 font-medium flex items-center gap-6"
               >
                 {cert?.icon && (
-                  <cert.icon className="text-yellow-400" size={38} />
+                  <div className="flex items-center justify-center p-3 bg-gray-900/50 rounded-lg">
+                  <cert.icon className="text-red-800" size={32} />
+                  </div>
                 )}
                 {cert?.title}
               </div>

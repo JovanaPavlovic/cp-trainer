@@ -10,7 +10,7 @@ import style from "./application.module.css";
 const Applications = () => {
   const applications = [
     {
-      icon: <Microscope className="text-emerald-400" size={48} />,
+      icon: <Microscope className="text-red-800" size={32} />,
       title: "In the Lab",
       description:
         "Conduct standardized, research-grade assessments designed for academic rigor and publication-ready results.",
@@ -22,7 +22,7 @@ const Applications = () => {
       ],
     },
     {
-      icon: <ActivityIcon className="text-yellow-400" size={48} />,
+      icon: <ActivityIcon className="text-yellow-600" size={32} />,
       title: "On the Field",
       description:
         "Perform ast, objective screenings during training sessions or pre-competition routines - no setup hassle, just actionable data.",
@@ -34,7 +34,7 @@ const Applications = () => {
       ],
     },
     {
-      icon: <Stethoscope className="text-emerald-400" size={48} />,
+      icon: <Stethoscope className="text-red-800" size={32} />,
       title: "In the Clinic",
       description:
         "Track rehabilitation and return-to-play progress with reliable, repeatable strength metrics that support confident decision-making",
@@ -46,7 +46,7 @@ const Applications = () => {
       ],
     },
     {
-      icon: <Handshake className="text-yellow-400" size={48} />,
+      icon: <Handshake className="text-yellow-600" size={32} />,
       title: "With Teams",
       description:
         "Monitor and manage centralized performance data across your entire squad, which is updated in real time for coaches and support staff.",
@@ -58,7 +58,7 @@ const Applications = () => {
       ],
     },
     {
-      icon: <GraduationCap className="text-emerald-400" size={48} />,
+      icon: <GraduationCap className="text-red-800" size={32} />,
       title: "For Education",
       description:
         "Bring applied physiology to life with interactive tools that make learning measurable, hands-on, and engaging.",
@@ -78,7 +78,7 @@ const Applications = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Where CP Trainer Fits In
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             A user-friendly force measurement system designed for clinicians,
             sports scientists, and performance pros who demand accuracy,
             seamless data integration, and expert support.
@@ -89,22 +89,22 @@ const Applications = () => {
           {applications.map((app, index) => (
             <div
               key={index}
-              className="bg-gray-900/50 p-8 rounded-xl border border-gray-700 hover:border-emerald-500/30 transition-all duration-300"
+              className="bg-gray-800/30 p-8 rounded-xl border border-gray-900 hover:border-yellow-600/50 transition-all duration-300"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-gray-700/50 rounded-lg">{app.icon}</div>
+                <div className="p-3 bg-gray-900 rounded-lg">{app.icon}</div>
                 <h3 className="text-2xl font-bold text-white">{app.title}</h3>
               </div>
 
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+              <p className="text-white mb-6 text-lg leading-relaxed">
                 {app.description}
               </p>
 
               <div className="space-y-3">
                 {app.useCases.map((useCase, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-                    <span className="text-gray-300">{useCase}</span>
+                    <div className="w-2 h-2 bg-red-800 rounded-full" />
+                    <span className="text-white">{useCase}</span>
                   </div>
                 ))}
               </div>

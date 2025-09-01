@@ -42,7 +42,7 @@ const TechnicalOverview = () => {
 
   const features = [
     {
-      icon: <Bluetooth className="text-emerald-400" size={48} />,
+      icon: <Bluetooth className="text-red-800" size={32} />,
       title: "Compact, Durable Sensor Modules",
       description: "Engineered for versatility, built for performance.",
       useCases: [
@@ -52,7 +52,7 @@ const TechnicalOverview = () => {
       ],
     },
     {
-      icon: <Smartphone className="text-yellow-400" size={48} />,
+      icon: <Smartphone className="text-yellow-600" size={32} />,
       title: "CP Trainer App",
       description: "Smart testing meets effortless execution",
       useCases: [
@@ -62,7 +62,7 @@ const TechnicalOverview = () => {
       ],
     },
     {
-      icon: <LayoutDashboard className="text-emerald-400" size={48} />,
+      icon: <LayoutDashboard className="text-red-800" size={32} />,
       title: "Dashboard Preview",
       description: "Compatible with any device via USB-C",
       useCases: [
@@ -74,7 +74,7 @@ const TechnicalOverview = () => {
   ];
 
   return (
-    <section className="pb-20 bg-gray-800" id="specifications">
+    <section className="pt-20 bg-gray-950 opacity-95" id="specifications">
       <div className="max-w-6xl lg:max-w-full mx-auto px-5 lg:px-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -92,20 +92,24 @@ const TechnicalOverview = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-gray-900/50 p-8 rounded-xl border border-gray-700 hover:border-emerald-500/30 transition-all duration-300"
+              className="bg-gray-800/30 p-8 rounded-xl border border-gray-900 hover:border-yellow-600/50 transition-all duration-300"
             >
-              <div className="flex justify-center mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-3 text-center">
-                {feature.title}
-              </h3>
-              <h3 className="text-gray-300 text-lg text-center font-semibold mb-4">
+              <div className="mb-4 flex gap-3 items-center">
+                <div className="flex justify-center bg-gray-800 rounded-lg p-3">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white text-center">
+                  {feature.title}
+                </h3>
+              </div>
+              <h3 className="text-white text-lg text-center font-semibold mb-4">
                 {feature.description}
               </h3>
               <div className="space-y-3">
                 {feature?.useCases?.map((useCase, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-                    <span className="text-gray-300">{useCase}</span>
+                    <div className="w-2 h-2 bg-red-800 rounded-full" />
+                    <span className="text-white">{useCase}</span>
                   </div>
                 ))}
               </div>

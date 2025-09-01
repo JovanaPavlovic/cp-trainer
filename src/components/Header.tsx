@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Menu, X, Activity } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "../assets/logo_small.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,14 +14,15 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-700">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-gray-700">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-600 rounded-lg">
+            {/* <div className="p-2 bg-red-900 rounded-lg">
               <Activity className="text-white" size={24} />
-            </div>
+            </div> */}
+            <img src={logo} alt="Logo" className="w-12 h-12" />
             <span className="text-xl font-bold text-white">CP Trainer</span>
           </div>
 
@@ -30,7 +32,7 @@ const Header = () => {
               <a
                 key={index}
                 href={item.href}
-                className="text-gray-300 hover:text-emerald-400 font-medium transition-colors duration-300"
+                className="text-white hover:text-red-700 font-medium transition-colors duration-300"
               >
                 {item.label}
               </a>
@@ -39,7 +41,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300">
+            <button className="bg-red-800 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300">
               Get Quote
             </button>
           </div>
@@ -61,13 +63,13 @@ const Header = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className="text-gray-300 hover:text-emerald-400 font-medium transition-colors duration-300"
+                  className="text-white hover:text-red-700 font-medium transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 mt-4">
+              <button className="bg-red-800 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 mt-4">
                 Get Quote
               </button>
             </nav>
