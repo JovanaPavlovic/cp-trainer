@@ -73,7 +73,7 @@ const Applications = () => {
 
   return (
     <section className={style.container} id="applications">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-full mx-auto px-10 lg:px-40">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Where CP Trainer Fits In

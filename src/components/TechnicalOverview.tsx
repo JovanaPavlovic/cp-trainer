@@ -1,44 +1,49 @@
 import { Bluetooth, LayoutDashboard, Smartphone } from "lucide-react";
+import DeviceOneImg from "../assets/device_1.png";
+import DeviceTwoImg from "../assets/device_2.png";
+import DeviceThreeImg from "../assets/device_3.png";
+
+import style from "./technicalOverview.module.css";
 
 const TechnicalOverview = () => {
-  // const specifications = [
-  //   {
-  //     category: "Measurement Specifications",
-  //     specs: [
-  //       { label: "Force Range", value: "0.1N - 2000N" },
-  //       { label: "Accuracy", value: "±0.1% full scale" },
-  //       { label: "Resolution", value: "0.01N" },
-  //       { label: "Sampling Rate", value: "1000 Hz" },
-  //     ],
-  //   },
-  //   {
-  //     category: "Physical Properties",
-  //     specs: [
-  //       { label: "Weight", value: "500g" },
-  //       { label: "Dimensions", value: "180 × 65 × 25 mm" },
-  //       { label: "Protection Rating", value: "IP65" },
-  //       { label: "Operating Temperature", value: "-10°C to +50°C" },
-  //     ],
-  //   },
-  //   {
-  //     category: "Connectivity & Power",
-  //     specs: [
-  //       { label: "Wireless", value: "Bluetooth 5.0 LE" },
-  //       { label: "Wired", value: "USB-C (data + charging)" },
-  //       { label: "Battery Life", value: "12+ hours continuous" },
-  //       { label: "Charging Time", value: "2 hours (fast charge)" },
-  //     ],
-  //   },
-  //   {
-  //     category: "Compliance & Standards",
-  //     specs: [
-  //       { label: "Medical Device", value: "Class IIa (EU MDR)" },
-  //       { label: "EMC", value: "IEC 60601-1-2" },
-  //       { label: "Safety", value: "IEC 62304" },
-  //       { label: "Quality", value: "ISO 13485" },
-  //     ],
-  //   },
-  // ];
+  const specifications = [
+    {
+      category: "Measurement Specifications",
+      specs: [
+        { label: "Force Range", value: "-" },
+        { label: "Accuracy", value: "±0.1% full scale" },
+        { label: "Resolution", value: "-" },
+        { label: "Sampling Rate", value: "-" },
+      ],
+    },
+    {
+      category: "Physical Properties",
+      specs: [
+        { label: "Weight", value: "-" },
+        { label: "Dimensions", value: "-" },
+        { label: "Protection Rating", value: "-" },
+        { label: "Operating Temperature", value: "-10°C to +50°C" },
+      ],
+    },
+    {
+      category: "Connectivity & Power",
+      specs: [
+        { label: "Wireless", value: "Bluetooth 5.0 LE" },
+        { label: "Wired", value: "USB-C (data + charging)" },
+        { label: "Battery Life", value: "-" },
+        { label: "Charging Time", value: "-" },
+      ],
+    },
+    {
+      category: "Compliance & Standards",
+      specs: [
+        { label: "Medical Device", value: "-" },
+        { label: "EMC", value: "-" },
+        { label: "Safety", value: "-" },
+        { label: "Quality", value: "-" },
+      ],
+    },
+  ];
 
   const features = [
     {
@@ -75,7 +80,7 @@ const TechnicalOverview = () => {
 
   return (
     <section className="pt-20 bg-gray-950 opacity-95" id="specifications">
-      <div className="max-w-6xl lg:max-w-full mx-auto px-5 lg:px-20">
+      <div className="max-w-full mx-auto lg:px-40 px-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Visual & Technical Overview
@@ -102,14 +107,17 @@ const TechnicalOverview = () => {
                   {feature.title}
                 </h3>
               </div>
-              <h3 className="text-white text-lg text-center font-semibold mb-4">
+              <h3 className="text-white text-lg font-semibold mb-4">
                 {feature.description}
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {feature?.useCases?.map((useCase, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-red-800 rounded-full" />
-                    <span className="text-white">{useCase}</span>
+                    {/* <span className="w-2 h-2 bg-red-800 rounded-full" />
+                    <span className="text-white">{useCase}</span> */}
+                    <ul className={style.listBullets}>
+                      <li className="text-white">{useCase}</li>
+                    </ul>
                   </div>
                 ))}
               </div>
@@ -118,20 +126,35 @@ const TechnicalOverview = () => {
         </div>
 
         {/* Device Image and Specs */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
           {/* Device Visualization */}
-          <div className="space-y-8">
-            {/* <div className="bg-gradient-to-br from-gray-700 to-gray-800 p-8 rounded-xl border border-gray-600">
-              <div
-                className="w-full h-80 bg-cover bg-center rounded-lg"
-                style={{
-                  backgroundImage:
-                    'url("https://images.pexels.com/photos/6823543/pexels-photo-6823543.jpeg")',
-                }}
-              />
-            </div> */}
-
-            {/* <div className="grid grid-cols-2 gap-4">
+          {/* <div className="space-y-8"> */}
+          <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-8 rounded-xl border border-gray-800">
+            <div
+              className="w-full h-50 2xl:h-80 bg-cover bg-center rounded-lg"
+              style={{
+                backgroundImage: `url(${DeviceOneImg})`,
+              }}
+            />
+          </div>
+          <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-8 rounded-xl border border-gray-800">
+            <div
+              className="w-full h-50 2xl:h-80 bg-cover bg-center rounded-lg"
+              style={{
+                backgroundImage: `url(${DeviceTwoImg})`,
+              }}
+            />
+          </div>
+          <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-8 rounded-xl border border-gray-800">
+            <div
+              className="w-full h-50 2xl:h-80 bg-cover bg-center rounded-lg"
+              style={{
+                backgroundImage: `url(${DeviceThreeImg})`,
+              }}
+            />
+          </div>
+          {/* 
+          <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-700/50 p-4 rounded-lg text-center">
                 <div className="text-2xl font-bold text-emerald-400 mb-1">
                   500g
@@ -147,38 +170,38 @@ const TechnicalOverview = () => {
                 </div>
               </div>
             </div> */}
-          </div>
-
-          {/* Technical Specifications */}
-          {/* <div className="space-y-8">
-            {specifications.map((category, index) => (
-              <div
-                key={index}
-                className="bg-gray-900/50 rounded-xl border border-gray-700 overflow-hidden"
-              >
-                <div className="bg-emerald-900/30 p-4 border-b border-gray-700">
-                  <h3 className="text-lg font-bold text-white">
-                    {category.category}
-                  </h3>
-                </div>
-
-                <div className="p-6 space-y-4">
-                  {category.specs.map((spec, specIndex) => (
-                    <div
-                      key={specIndex}
-                      className="flex justify-between items-center"
-                    >
-                      <span className="text-gray-300">{spec.label}</span>
-                      <span className="font-semibold text-white">
-                        {spec.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div> */}
         </div>
+
+        {/* Technical Specifications */}
+        <div className="space-y-8 grid grid-cols-1 lg:grid-cols-2 gap-x-20 py-20">
+          {specifications.map((category, index) => (
+            <div
+              key={index}
+              className="bg-gray-800/30 rounded-xl border border-gray-800 overflow-hidden"
+            >
+              <div className="bg-red-800/50 p-4 border-b border-gray-800">
+                <h3 className="text-lg font-bold text-white">
+                  {category.category}
+                </h3>
+              </div>
+
+              <div className="p-6 space-y-4">
+                {category.specs.map((spec, specIndex) => (
+                  <div
+                    key={specIndex}
+                    className="flex justify-between items-center"
+                  >
+                    <span className="text-white uppercase">{spec.label}</span>
+                    <span className="font-semibold text-white">
+                      {spec.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* </div> */}
       </div>
     </section>
   );

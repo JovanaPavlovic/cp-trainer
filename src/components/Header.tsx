@@ -1,9 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/logo_small.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Lock background scroll when menu is open
+    useEffect(() => {
+      if (isMenuOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+  
+      // Clean up on unmount (or when isMenuOpen changes)
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }, [isMenuOpen]);
+  
 
   const navItems = [
     { label: "Features", href: "#features" },
@@ -14,7 +29,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-gray-700">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 border-b border-gray-800">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -57,19 +72,19 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-700">
+          <div className="md:hidden py-4 border-t border-gray-800 min-h-[100vh]">
             <nav className="flex flex-col gap-4">
               {navItems.map((item, index) => (
                 <a
                   key={index}
                   href={item.href}
-                  className="text-white hover:text-red-700 font-medium transition-colors duration-300"
+                  className="text-white hover:text-red-700 font-medium transition-colors duration-300 uppercase underline underline-offset-4"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <button className="bg-red-800 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 mt-4">
+              <button className="bg-red-800 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 mt-20">
                 Get Quote
               </button>
             </nav>

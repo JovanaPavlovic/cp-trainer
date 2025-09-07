@@ -46,7 +46,7 @@ const Features = () => {
 
   return (
     <section className="py-20 bg-gray-950 opacity-95" id="features">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-full mx-auto lg:px-40 px-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Features & Benefits
@@ -57,7 +57,7 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}

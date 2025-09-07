@@ -2,8 +2,8 @@ import { AlertTriangle, Target, CheckCircle, AlertCircle } from "lucide-react";
 
 const ProblemSolution = () => {
   return (
-    <section className="py-20 bg-gray-950">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-20 bg-gray-950" id="problems&solutions">
+      <div className="max-w-full mx-auto lg:px-40 px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Problem */}
           <div className="space-y-8">

@@ -63,11 +63,8 @@ const SocialProof = () => {
   // ];
 
   return (
-    <section className="py-20 bg-gray-950">
-      <div
-        className="max-w-6xl lg:max-w-full mx-auto px-5 lg:px-20"
-        id="localization"
-      >
+    <section className="py-20 bg-gray-950" id="localization">
+      <div className="max-w-6xl lg:max-w-full mx-auto px-5 lg:px-20">
         {/* Stats */}
         {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
@@ -137,7 +134,7 @@ const SocialProof = () => {
               >
                 {cert?.icon && (
                   <div className="flex items-center justify-center p-3 bg-gray-900/50 rounded-lg">
-                  <cert.icon className="text-red-800" size={32} />
+                    <cert.icon className="text-red-800" size={32} />
                   </div>
                 )}
                 {cert?.title}
