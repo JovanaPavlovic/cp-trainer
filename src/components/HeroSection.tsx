@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import HeroImage from "../assets/universal.jpg";
 
 const Hero = () => {
   return (
@@ -8,7 +9,10 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            'url("https://cdn.dribbble.com/userupload/43564359/file/original-4de1093aea546fc123c3ca03e56512a2.png?resize=2400x1800&vertical=center")',
+          `url(${HeroImage})`,
+          backgroundPosition: "top center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       />
 
