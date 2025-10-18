@@ -47,7 +47,7 @@ const TechnicalOverview = () => {
 
   const features = [
     {
-      icon: <Bluetooth className="text-red-800" size={32} />,
+      icon: <Bluetooth className={style.icon} size={32} />,
       title: "Compact, Durable Sensor Modules",
       description: "Engineered for versatility, built for performance.",
       useCases: [
@@ -57,7 +57,7 @@ const TechnicalOverview = () => {
       ],
     },
     {
-      icon: <Smartphone className="text-yellow-600" size={32} />,
+      icon: <Smartphone className={style.icon} size={32} />,
       title: "CP Trainer App",
       description: "Smart testing meets effortless execution",
       useCases: [
@@ -67,7 +67,7 @@ const TechnicalOverview = () => {
       ],
     },
     {
-      icon: <LayoutDashboard className="text-red-800" size={32} />,
+      icon: <LayoutDashboard className={style.icon} size={32} />,
       title: "Dashboard Preview",
       description: "Compatible with any device via USB-C",
       useCases: [
@@ -79,13 +79,13 @@ const TechnicalOverview = () => {
   ];
 
   return (
-    <section className="pt-20 bg-gray-950 opacity-95" id="specifications">
-      <div className="max-w-full mx-auto lg:px-40 px-10">
+    <section className="pt-10 xl:pt-20 bg-gray-950 opacity-95" id="specifications">
+      <div className="max-w-full mx-auto xl:px-20 px-5">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Visual & Technical Overview
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl xl:text-2xl text-white leading-relaxed mb-10 max-w-3xl mx-auto">
             Precision hardware and intuitive software delivering real-time
             strength data, versatile mounting, and seamless connectivity for
             clinical and sports environments.
@@ -93,21 +93,21 @@ const TechnicalOverview = () => {
         </div>
 
         {/* Visual Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 gap-6 mb-16">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-gray-800/30 p-8 rounded-xl border border-gray-900 hover:border-yellow-600/50 transition-all duration-300"
+              className="bg-gray-600/30 p-4 xl:p-8 rounded-xl border border-gray-900 hover:border-red-400/50 transition-all duration-300"
             >
               <div className="mb-4 flex gap-3 items-center">
-                <div className="flex justify-center bg-gray-800 rounded-lg p-3">
+                <div className="flex justify-center bg-gray-600 rounded-lg p-3">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white text-center">
+                <h3 className="text-xl xl:text-3xl font-semibold text-white uppercase">
                   {feature.title}
                 </h3>
               </div>
-              <h3 className="text-white text-lg font-semibold mb-4">
+              <h3 className="text-white text-xl xl:text-2xl font-semibold mb-4 leading-relaxed">
                 {feature.description}
               </h3>
               <div className="space-y-4">
@@ -116,7 +116,7 @@ const TechnicalOverview = () => {
                     {/* <span className="w-2 h-2 bg-red-800 rounded-full" />
                     <span className="text-white">{useCase}</span> */}
                     <ul className={style.listBullets}>
-                      <li className="text-white">{useCase}</li>
+                      <li className="text-white xl:text-2xl leading-relaxed">{useCase}</li>
                     </ul>
                   </div>
                 ))}
@@ -129,7 +129,7 @@ const TechnicalOverview = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
           {/* Device Visualization */}
           {/* <div className="space-y-8"> */}
-          <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-8 rounded-xl border border-gray-800">
+          <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-4 xl:p-8 rounded-xl border border-gray-800">
             <div
               className="w-full h-50 2xl:h-80 bg-cover bg-center rounded-lg"
               style={{
@@ -137,7 +137,7 @@ const TechnicalOverview = () => {
               }}
             />
           </div>
-          <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-8 rounded-xl border border-gray-800">
+          <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-4 xl:p-8 rounded-xl border border-gray-800">
             <div
               className="w-full h-50 2xl:h-80 bg-cover bg-center rounded-lg"
               style={{
@@ -145,7 +145,7 @@ const TechnicalOverview = () => {
               }}
             />
           </div>
-          <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-8 rounded-xl border border-gray-800">
+          <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-4 xl:p-8 rounded-xl border border-gray-800">
             <div
               className="w-full h-50 2xl:h-80 bg-cover bg-center rounded-lg"
               style={{
@@ -173,26 +173,26 @@ const TechnicalOverview = () => {
         </div>
 
         {/* Technical Specifications */}
-        <div className="space-y-8 grid grid-cols-1 lg:grid-cols-2 gap-x-20 py-20">
+        <div className="space-y-8 grid grid-cols-1 lg:grid-cols-2 gap-x-20 py-10 xl:py-20">
           {specifications.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-800/30 rounded-xl border border-gray-800 overflow-hidden"
+              className="bg-gray-800/30 rounded-xl border border-gray-800 overflow-hidden max-h-[320px]"
             >
-              <div className="bg-red-800/50 p-4 border-b border-gray-800">
-                <h3 className="text-lg font-bold text-white">
+              <div className="bg-red-600/85 p-4 border-b border-gray-800">
+                <h3 className="text-xl lg:text-2xl font-semibold text-white uppercase">
                   {category.category}
                 </h3>
               </div>
 
-              <div className="p-6 space-y-4">
+              <div className="p-4 xl:p-6 space-y-4">
                 {category.specs.map((spec, specIndex) => (
                   <div
                     key={specIndex}
                     className="flex justify-between items-center"
                   >
-                    <span className="text-white uppercase">{spec.label}</span>
-                    <span className="font-semibold text-white">
+                    <span className="text-white uppercase xl:text-2xl leading-relaxed">{spec.label}</span>
+                    <span className="font-semibold text-white xl:text-2xl leading-relaxed">
                       {spec.value}
                     </span>
                   </div>

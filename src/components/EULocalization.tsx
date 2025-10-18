@@ -1,4 +1,5 @@
 import { MapPin, Shield, FileText, Truck } from "lucide-react";
+import style from "./euLocalization.module.css";
 
 const EULocalization = () => {
   const euBenefits = [
@@ -46,8 +47,8 @@ const EULocalization = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900">
-      <div className="max-w-full mx-auto lg:px-40 px-10">
+    <section className="py-10 xl:py-20 bg-gray-900">
+      <div className="max-w-full mx-auto xl:px-20 px-5">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             European Excellence
@@ -89,7 +90,7 @@ const EULocalization = () => {
               {countries.map((country, index) => (
                 <div
                   key={index}
-                  className="bg-gray-800/50 p-3 rounded text-center text-gray-300 hover:text-emerald-400 hover:bg-gray-800/70 transition-all duration-300"
+                  className={style.button}
                 >
                   {country}
                 </div>
@@ -97,7 +98,7 @@ const EULocalization = () => {
             </div>
 
             <div className="text-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+              <button className={style.button}>
                 Find Local Distributor
               </button>
             </div>
@@ -105,7 +106,7 @@ const EULocalization = () => {
         </div>
 
         {/* Compliance Section */}
-        <div className="bg-gray-800/30 p-8 rounded-xl border border-gray-700">
+        {/* <div className="bg-gray-800/30 p-8 rounded-xl border border-gray-700">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Regulatory Compliance
@@ -142,7 +143,7 @@ const EULocalization = () => {
               <div className="text-gray-300 text-sm">Conformity Marking</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/logo_small.png";
+import style from "./header.module.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,8 +31,8 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 border-b border-gray-800">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-full mx-auto px-10">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
             {/* <div className="p-2 bg-red-900 rounded-lg">
@@ -42,12 +43,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-8">
             {navItems.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
-                className="text-white hover:text-red-700 font-medium transition-colors duration-300"
+                className="text-white text-xl uppercase leading-relaxed hover:text-red-700 font-medium transition-colors duration-300"
               >
                 {item.label}
               </a>
@@ -55,15 +56,15 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
-            <button className="bg-red-800 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300">
+          <div className="hidden xl:block">
+            <button className={style.headerButton}>
               Get Quote
             </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="xl:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

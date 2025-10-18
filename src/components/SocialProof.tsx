@@ -7,6 +7,8 @@ import {
   Globe,
 } from "lucide-react";
 
+import style from "./socialProof.module.css";
+
 const SocialProof = () => {
   // const testimonials = [
   //   {
@@ -63,8 +65,8 @@ const SocialProof = () => {
   // ];
 
   return (
-    <section className="py-20 bg-gray-950" id="localization">
-      <div className="max-w-6xl lg:max-w-full mx-auto px-5 lg:px-20">
+    <section className="py-10 xl:py-20 bg-gray-950" id="localization">
+      <div className="max-w-6xl lg:max-w-full mx-auto px-5 xl:px-20">
         {/* Stats */}
         {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
@@ -120,28 +122,30 @@ const SocialProof = () => {
         </div> */}
 
         {/* Certifications */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-8 flex items-center justify-center gap-3">
-            <Globe className="text-yellow-600" size={32} />
-            EU-Focused Localization
-          </h3>
+        <>
+          <div className="text-3xl font-semibold text-white mb-8 flex items-center justify-center gap-3 uppercase w-full">
+            <Globe className={style.icon} size={38} />
+            <p>EU-Focused Localization</p>
+          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-1 gap-3 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 gap-3 max-w-6xl mx-auto">
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-gray-800/30 p-4 rounded-lg border border-gray-700 text-gray-300 font-medium flex items-center gap-6"
+                className="bg-gray-600/30 p-4 rounded-lg border border-gray-700 text-white font-semibold flex items-center"
               >
                 {cert?.icon && (
-                  <div className="flex items-center justify-center p-3 bg-gray-900/50 rounded-lg">
-                    <cert.icon className="text-red-800" size={32} />
+                  <div className="flex items-center gap-6">
+                    <div className="flex items-center p-3 bg-gray-600 rounded-lg">
+                      <cert.icon className={style.icon} size={32} />
+                    </div>
+                    <p className="text-start text-sm xl:text-2xl uppercase">{cert?.title}</p>
                   </div>
                 )}
-                {cert?.title}
               </div>
             ))}
           </div>
-        </div>
+        </>
       </div>
     </section>
   );

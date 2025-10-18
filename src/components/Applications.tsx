@@ -6,11 +6,16 @@ import {
   GraduationCap,
 } from "lucide-react";
 import style from "./application.module.css";
+import labImage from "../assets/Lab.jpg";
+import onFiled from "../assets/OnField.jpg";
+import clinicImage from "../assets/Clinic.jpg";
+import teamsImage from "../assets/Teams.jpg";
+import educationImage from "../assets/Education.jpg";
 
 const Applications = () => {
   const applications = [
     {
-      icon: <Microscope className="text-red-800" size={32} />,
+      icon: <Microscope className={style.icon} size={32} />,
       title: "In the Lab",
       description:
         "Conduct standardized, research-grade assessments designed for academic rigor and publication-ready results.",
@@ -20,9 +25,10 @@ const Applications = () => {
         "Sports Science Studies",
         "Data-Driven Publications",
       ],
+      image: labImage,
     },
     {
-      icon: <ActivityIcon className="text-yellow-600" size={32} />,
+      icon: <ActivityIcon className={style.icon} size={32} />,
       title: "On the Field",
       description:
         "Perform ast, objective screenings during training sessions or pre-competition routines - no setup hassle, just actionable data.",
@@ -32,9 +38,10 @@ const Applications = () => {
         "Injury prevention screening",
         "Coach Feedback",
       ],
+      image: onFiled,
     },
     {
-      icon: <Stethoscope className="text-red-800" size={32} />,
+      icon: <Stethoscope className={style.icon} size={32} />,
       title: "In the Clinic",
       description:
         "Track rehabilitation and return-to-play progress with reliable, repeatable strength metrics that support confident decision-making",
@@ -44,9 +51,10 @@ const Applications = () => {
         "Return-to-Play Clearance",
         "Progress Reporting",
       ],
+      image: clinicImage,
     },
     {
-      icon: <Handshake className="text-yellow-600" size={32} />,
+      icon: <Handshake className={style.icon} size={32} />,
       title: "With Teams",
       description:
         "Monitor and manage centralized performance data across your entire squad, which is updated in real time for coaches and support staff.",
@@ -56,9 +64,10 @@ const Applications = () => {
         "Informed Coach Decision-Making",
         "Long-Term Performance Tracking",
       ],
+      image: teamsImage,
     },
     {
-      icon: <GraduationCap className="text-red-800" size={32} />,
+      icon: <GraduationCap className={style.icon} size={32} />,
       title: "For Education",
       description:
         "Bring applied physiology to life with interactive tools that make learning measurable, hands-on, and engaging.",
@@ -68,47 +77,63 @@ const Applications = () => {
         "Assessment & Feedback",
         "Professional Development",
       ],
+      image: educationImage,
     },
   ];
 
   return (
     <section className={style.container} id="applications">
-      <div className="max-w-full mx-auto px-10 lg:px-40">
+      <div className="max-w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Where CP Trainer Fits In
           </h2>
-          <p className="text-xl text-white max-w-3xl mx-auto">
+          <p className="text-xl xl:text-2xl text-white max-w-3xl mx-auto leading-relaxed">
             A user-friendly force measurement system designed for clinicians,
             sports scientists, and performance pros who demand accuracy,
             seamless data integration, and expert support.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12 mx-auto">
           {applications.map((app, index) => (
+            // <div className="flex">
             <div
               key={index}
-              className="bg-gray-800/30 p-8 rounded-xl border border-gray-900 hover:border-yellow-600/50 transition-all duration-300"
+              className={`bg-gray-600/30 p-4 xl:p-8 rounded-xl border border-gray-900 hover:border-red-400/50 transition-all duration-300 flex flex-col lg:flex-row ${
+                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+              } gap-8 items-center`}
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-gray-900 rounded-lg">{app.icon}</div>
-                <h3 className="text-2xl font-bold text-white">{app.title}</h3>
+              <div className="w-full lg:w-1/2">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 bg-gray-600 rounded-lg">{app.icon}</div>
+                  <h3 className={style.title}>
+                    {app.title}
+                  </h3>
+                </div>
+
+                <p className="text-white mb-6 xl:text-2xl leading-relaxed">
+                  {app.description}
+                </p>
+
+                <div className="space-y-2">
+                  {app.useCases.map((useCase, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-red-800 rounded-full" />
+                      <span className="text-white xl:text-2xl leading-relaxed">
+                        {useCase}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
-
-              <p className="text-white mb-6 text-lg leading-relaxed">
-                {app.description}
-              </p>
-
-              <div className="space-y-3">
-                {app.useCases.map((useCase, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-red-800 rounded-full" />
-                    <span className="text-white">{useCase}</span>
-                  </div>
-                ))}
+              <div
+                className="w-full lg:w-1/2 aspect-video rounded-2xl bg-center bg-cover bg-no-repeat"
+                style={{ backgroundImage: `url(${app.image})` }}
+              >
               </div>
             </div>
+            // </div>
           ))}
         </div>
       </div>

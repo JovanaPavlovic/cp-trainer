@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 .listBullets {
-    @apply list-disc list-inside;
+    @apply list-disc list-inside xl:text-2xl;
 }
 
 .listBullets li::marker {
-    @apply text-red-800 text-[24px] leading-0;
+    @apply text-red-800 text-lg xl:text-2xl leading-0;
+}
+
+.icon {
+    @apply text-[#e60e0e]
 }

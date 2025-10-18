@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import style from "./faq.module.css";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -31,13 +32,13 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-950 opacity-95" id="faq">
-      <div className="max-w-4xl mx-auto px-6">
+    <section className="py-10 xl:py-20 bg-gray-950 opacity-95" id="faq">
+      <div className="max-w-6xl mx-auto px-5 xl:px-0">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-semibold text-white mb-6 uppercase">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-white">
+          <p className="text-xl text-white leading-relaxed">
             Get answers to common questions about the CP Trainer system
           </p>
         </div>
@@ -46,13 +47,13 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-900/50 rounded-xl border border-gray-900 overflow-hidden hover:border-red-800/30 transition-all duration-300"
+              className="bg-gray-600/30 rounded-xl border border-gray-900 overflow-hidden hover:border-red-800/30 transition-all duration-300"
             >
               <button
-                className="w-full p-6 text-left flex justify-between items-center focus:outline-none"
+                className="w-full p-4 xl:p-6 text-left flex justify-between items-center focus:outline-none"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className="text-lg font-semibold text-white pr-4">
+                <h3 className="text-lg xl:text-xl font-semibold text-white pr-4 uppercase">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
@@ -72,7 +73,9 @@ const FAQ = () => {
                 } overflow-hidden`}
               >
                 <div className="px-6 pb-6">
-                  <p className="text-white leading-relaxed">{faq.answer}</p>
+                  <p className="text-white leading-relaxed text-xl">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
             </div>
@@ -80,12 +83,10 @@ const FAQ = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-white mb-6">
+          <p className="text-white mb-6 xl:text-xl leading-relaxed">
             Still have questions? Our technical team is here to help.
           </p>
-          <button className="bg-red-800 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-            Contact Technical Support
-          </button>
+          <button className={style.button}>Contact Technical Support</button>
         </div>
       </div>
     </section>

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+.icon {
+  @apply text-[#e60e0e];
+}
+
+.contentWrapper {
+  @apply max-w-full mx-auto xl:px-20 px-10;
+}
+
+.cardsWrapper {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-16 items-center;
+}
+
+.cards {
+  @apply space-y-8;
+}
+
+.cardsHeader {
+  @apply flex items-center gap-3 mb-6;
+}
+
+.problemCard {
+  @apply bg-gray-600/30 p-6 rounded-lg border-l-4 border-yellow-400 h-[50%] min-h-[200px];
+}
+
+.solutionCard {
+  @apply bg-gray-600/30 p-6 rounded-lg border-l-4 border-red-600 h-[50%] min-h-[200px];
+}
