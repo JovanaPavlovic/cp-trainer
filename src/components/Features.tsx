@@ -48,7 +48,7 @@ const Features = () => {
   return (
     <section className="py-10 xl:py-20 bg-gray-950 opacity-95" id="features">
       <div className="max-w-full mx-auto xl:px-20 px-5">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 xl:mb-16">
           <h2 className="text-xl xl:text-4xl font-medium text-white mb-6 uppercase">
             Features & Benefits
           </h2>
@@ -83,7 +83,7 @@ const Features = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-10 xl:mt-16 text-center">
           <button className={style.button}>
             <span>Download Technical Specifications</span>
           </button>

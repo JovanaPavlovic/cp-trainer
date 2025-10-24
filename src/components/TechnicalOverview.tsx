@@ -81,7 +81,7 @@ const TechnicalOverview = () => {
   return (
     <section className="pt-10 xl:pt-20 bg-gray-950 opacity-95" id="specifications">
       <div className="max-w-full mx-auto xl:px-20 px-5">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 xl:mb-16">
           <h2 className="text-xl xl:text-4xl font-medium text-white mb-6 uppercase">
             Visual & Technical Overview
           </h2>
@@ -126,7 +126,7 @@ const TechnicalOverview = () => {
         </div>
 
         {/* Device Image and Specs */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 xl:gap-16 items-start">
           {/* Device Visualization */}
           {/* <div className="space-y-8"> */}
           <div className="bg-gradient-to-br from-gray-700 to-gray-950 p-4 xl:p-8 rounded-xl border border-gray-800">

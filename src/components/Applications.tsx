@@ -84,7 +84,7 @@ const Applications = () => {
   return (
     <section className={style.container} id="applications">
       <div className="max-w-full">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 xl:mb-16">
           <h2 className="text-xl xl:text-4xl font-medium text-white mb-6 uppercase">
             Where CP Trainer Fits In
           </h2>

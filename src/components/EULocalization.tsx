@@ -49,7 +49,7 @@ const EULocalization = () => {
   return (
     <section className="py-10 xl:py-20 bg-gray-900">
       <div className="max-w-full mx-auto xl:px-20 px-5">
-        <div className="text-center mb-16">
+        <div className="text-center mb:10 xl:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             European Excellence
           </h2>
@@ -59,7 +59,7 @@ const EULocalization = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center mb-16">
           {/* EU Benefits */}
           <div className="space-y-6">
             {euBenefits.map((benefit, index) => (
