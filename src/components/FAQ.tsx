@@ -35,10 +35,10 @@ const FAQ = () => {
     <section className="py-10 xl:py-20 bg-gray-950 opacity-95" id="faq">
       <div className="max-w-6xl mx-auto px-5 xl:px-0">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-semibold text-white mb-6 uppercase">
+          <h2 className="text-xl xl:text-3xl font-semibold text-white mb-6 uppercase">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-white leading-relaxed">
+          <p className=" text-sm xl:text-[18px] text-white leading-relaxed">
             Get answers to common questions about the CP Trainer system
           </p>
         </div>
@@ -53,7 +53,7 @@ const FAQ = () => {
                 className="w-full p-4 xl:p-6 text-left flex justify-between items-center focus:outline-none"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className="text-lg xl:text-xl font-semibold text-white pr-4 uppercase">
+                <h3 className="text-sm xl:text-xl font-semibold text-white pr-4 uppercase">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
@@ -73,7 +73,7 @@ const FAQ = () => {
                 } overflow-hidden`}
               >
                 <div className="px-6 pb-6">
-                  <p className="text-white leading-relaxed text-xl">
+                  <p className="text-white leading-relaxed text-sm xl:text-[16px]">
                     {faq.answer}
                   </p>
                 </div>
@@ -86,7 +86,9 @@ const FAQ = () => {
           <p className="text-white mb-6 xl:text-xl leading-relaxed">
             Still have questions? Our technical team is here to help.
           </p>
-          <button className={style.button}>Contact Technical Support</button>
+          <button className={style.button}>
+            <span>Contact Technical Support</span>
+          </button>
         </div>
       </div>
     </section>

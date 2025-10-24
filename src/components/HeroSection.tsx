@@ -21,7 +21,7 @@ const Hero = () => {
       {/* Content */}
       <div className={style.contentWrapper}>
         <h1 className={style.title}>
-          Precision Strenght Testing
+          Precision Strength Testing
           <div className={style.anywhereAnytime}>
             <span className={style.anywhere}>Anywhere</span>
             <span className="block text-yellow-400">Anytime</span>
@@ -37,7 +37,9 @@ const Hero = () => {
         </p>
 
         <div className={style.buttonWrapper}>
-          <button className={style.button}>Get Pricing & Info</button>
+          <button className={style.button}>
+            <span>Get Pricing & Info</span>
+          </button>
         </div>
 
         <div className={style.stats}>
@@ -46,7 +48,7 @@ const Hero = () => {
             <div className={style.text}>Measurement Accuracy</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-400 mb-2">2000N</div>
+            <div className="text-lg xl:text-3xl font-bold text-yellow-400 mb-2">2000N</div>
             <div className={style.text}>Maximum Force</div>
           </div>
           <div className="text-center">

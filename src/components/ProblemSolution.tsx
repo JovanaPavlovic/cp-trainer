@@ -9,8 +9,8 @@ const ProblemSolution = () => {
           {/* Problem */}
           <div className={style.cards}>
             <div className={style.cardsHeader}>
-              <AlertTriangle className="text-yellow-400" size={48} />
-              <h2 className="text-3xl font-semibold text-white">
+              <AlertTriangle className="text-yellow-400" size={32} />
+              <h2 className="text-xl xl:text-2xl font-semibold text-white">
                 The Challenge
               </h2>
             </div>
@@ -19,11 +19,11 @@ const ProblemSolution = () => {
               <div className={style.problemCard}>
                 <div className="flex gap-3 items-center mb-3">
                   <AlertCircle className="text-yellow-400" size={32} />
-                  <h3 className="text-xl lg:text-3xl font-semibold text-white">
+                  <h3 className="text-lg xl:text-xl font-semibold text-white">
                     When Testing Becomes the Barrier
                   </h3>
                 </div>
-                <p className="text-white text-xl leading-relaxed">
+                <p className="text-white text-sm xl:text-[18px] leading-relaxed">
                   Traditional performance testing tools are bulky, expensive,
                   overcomplicated and limited to laboratory settings, making
                   field testing nearly impossible.
@@ -33,11 +33,11 @@ const ProblemSolution = () => {
               <div className={style.problemCard}>
                 <div className="flex gap-3 items-center mb-3">
                   <AlertCircle className="text-yellow-400" size={32} />
-                  <h3 className="text-xl lg:text-3xl font-semibold text-white">
+                  <h3 className="text-lg xl:text-xl font-semibold text-white">
                     Complex Tools. Confusing Results
                   </h3>
                 </div>
-                <p className="text-white text-xl leading-relaxed">
+                <p className="text-white text-sm xl:text-[18px] leading-relaxed">
                   They require steep learning curves, consume valuable time, and
                   often fail to deliver clear, actionable insights.
                 </p>
@@ -48,8 +48,8 @@ const ProblemSolution = () => {
           {/* Solution */}
           <div className={style.cards}>
             <div className={style.cardsHeader}>
-              <Target className={style.icon} size={48} />
-              <h2 className="text-3xl font-bold text-white">Our Solution</h2>
+              <Target className={style.icon} size={32} />
+              <h2 className="text-lg xl:text-2xl font-semibold text-white">Our Solution</h2>
             </div>
 
             <div className="space-y-6 h-full">
@@ -57,12 +57,12 @@ const ProblemSolution = () => {
                 <div className="flex flex-col items-start gap-3">
                   <div className="flex gap-3 items-center">
                     <CheckCircle className={style.icon} size={32} />
-                    <h3 className="text-xl lg:text-3xl font-semibold text-white">
+                    <h3 className="text-lg xl:text-xl font-semibold text-white">
                       Modular Power. Measurable Results
                     </h3>
                   </div>
 
-                  <p className="text-white text-xl leading-relaxed">
+                  <p className="text-white text-sm xl:text-[18px] leading-relaxed">
                     CP Trainer redefines strength assessment with a compact,
                     modular system built for rapid assessments, precision,
                     simplicity, and real-time decision-making.
@@ -73,11 +73,11 @@ const ProblemSolution = () => {
                 <div className="flex flex-col items-start gap-3">
                   <div className="flex gap-3 items-center">
                     <CheckCircle className={style.icon} size={32} />
-                    <h3 className="text-xl lg:text-3xl font-semibold text-white mb-3">
+                    <h3 className="text-lg xl:text-xl font-semibold text-white">
                       Elite Accuracy, Effortless Experience
                     </h3>
                   </div>
-                  <p className="text-white text-xl leading-relaxed">
+                  <p className="text-white text-sm xl:text-[18px] leading-relaxed">
                     Designed for performance professionals, it combines
                     elite-level accuracy with an intuitive app experience and
                     transparent, accessible pricing.

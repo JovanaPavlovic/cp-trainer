@@ -125,7 +125,7 @@ const SocialProof = () => {
         <>
           <div className="text-3xl font-semibold text-white mb-8 flex items-center justify-center gap-3 uppercase w-full">
             <Globe className={style.icon} size={38} />
-            <p>EU-Focused Localization</p>
+            <h2 className="text-lg xl:text-3xl font-medium text-white">EU-Focused Localization</h2>
           </div>
 
           <div className="grid grid-cols-1 gap-3 max-w-6xl mx-auto">
@@ -139,7 +139,7 @@ const SocialProof = () => {
                     <div className="flex items-center p-3 bg-gray-600 rounded-lg">
                       <cert.icon className={style.icon} size={32} />
                     </div>
-                    <p className="text-start text-sm xl:text-2xl uppercase">{cert?.title}</p>
+                    <p className="text-sm xl:text-xl font-semibold text-white pr-4 uppercase ">{cert?.title}</p>
                   </div>
                 )}
               </div>

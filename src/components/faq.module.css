@@ -5,5 +5,5 @@
 }
 
 .button {
-    @apply bg-[#e60e0e] hover:bg-red-700 text-white uppercase px-4 xl:px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg;
+    @apply bg-[#e60e0e] hover:bg-red-700 text-white uppercase px-4 xl:px-8 py-4 rounded-lg text-sm xl:text-[16px] font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg;
 }

@@ -82,10 +82,10 @@ const TechnicalOverview = () => {
     <section className="pt-10 xl:pt-20 bg-gray-950 opacity-95" id="specifications">
       <div className="max-w-full mx-auto xl:px-20 px-5">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-xl xl:text-4xl font-medium text-white mb-6 uppercase">
             Visual & Technical Overview
           </h2>
-          <p className="text-xl xl:text-2xl text-white leading-relaxed mb-10 max-w-3xl mx-auto">
+          <p className="text-[16px] xl:text-xl text-white leading-relaxed mb-10 max-w-3xl mx-auto">
             Precision hardware and intuitive software delivering real-time
             strength data, versatile mounting, and seamless connectivity for
             clinical and sports environments.
@@ -103,11 +103,11 @@ const TechnicalOverview = () => {
                 <div className="flex justify-center bg-gray-600 rounded-lg p-3">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl xl:text-3xl font-semibold text-white uppercase">
+                <h3 className="text-[16px] xl:text-xl font-semibold text-white uppercase">
                   {feature.title}
                 </h3>
               </div>
-              <h3 className="text-white text-xl xl:text-2xl font-semibold mb-4 leading-relaxed">
+              <h3 className="text-white text-[16px] xl:text-xl font-semibold mb-4 leading-relaxed capitalize">
                 {feature.description}
               </h3>
               <div className="space-y-4">
@@ -116,7 +116,7 @@ const TechnicalOverview = () => {
                     {/* <span className="w-2 h-2 bg-red-800 rounded-full" />
                     <span className="text-white">{useCase}</span> */}
                     <ul className={style.listBullets}>
-                      <li className="text-white xl:text-2xl leading-relaxed">{useCase}</li>
+                      <li className="text-white text-sm xl:text-xl leading-relaxed">{useCase}</li>
                     </ul>
                   </div>
                 ))}
@@ -173,14 +173,14 @@ const TechnicalOverview = () => {
         </div>
 
         {/* Technical Specifications */}
-        <div className="space-y-8 grid grid-cols-1 lg:grid-cols-2 gap-x-20 py-10 xl:py-20">
+        <div className="space-8 grid grid-cols-1 lg:grid-cols-2 gap-x-20 py-10 xl:py-20">
           {specifications.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-800/30 rounded-xl border border-gray-800 overflow-hidden max-h-[320px]"
+              className="bg-gray-800/30 rounded-xl border border-gray-800 overflow-hidden max-h-[320px] mb-8"
             >
               <div className="bg-red-600/85 p-4 border-b border-gray-800">
-                <h3 className="text-xl lg:text-2xl font-semibold text-white uppercase">
+                <h3 className="text-[16px] xl:text-xl font-semibold text-white uppercase">
                   {category.category}
                 </h3>
               </div>
@@ -191,8 +191,8 @@ const TechnicalOverview = () => {
                     key={specIndex}
                     className="flex justify-between items-center"
                   >
-                    <span className="text-white uppercase xl:text-2xl leading-relaxed">{spec.label}</span>
-                    <span className="font-semibold text-white xl:text-2xl leading-relaxed">
+                    <span className="text-white uppercase text-[14px] xl:text-[18px] leading-relaxed">{spec.label}</span>
+                    <span className="font-semibold text-white text-[14px] xl:text-[18px] leading-relaxed">
                       {spec.value}
                     </span>
                   </div>
@@ -201,7 +201,6 @@ const TechnicalOverview = () => {
             </div>
           ))}
         </div>
-        {/* </div> */}
       </div>
     </section>
   );

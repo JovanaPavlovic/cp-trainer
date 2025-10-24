@@ -31,9 +31,8 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 border-b border-gray-800">
-      <div className="max-w-full mx-auto px-10">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+      <div className="max-w-full mx-auto px-10 py-2">
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             {/* <div className="p-2 bg-red-900 rounded-lg">
               <Activity className="text-white" size={24} />
@@ -48,7 +47,7 @@ const Header = () => {
               <a
                 key={index}
                 href={item.href}
-                className="text-white text-xl uppercase leading-relaxed hover:text-red-700 font-medium transition-colors duration-300"
+                className="text-white text-[18px] uppercase leading-relaxed hover:text-red-700 font-medium transition-colors duration-300"
               >
                 {item.label}
               </a>
@@ -58,7 +57,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden xl:block">
             <button className={style.headerButton}>
-              Get Quote
+              <span>Get Quote</span>
             </button>
           </div>
 

@@ -26,7 +26,7 @@ const Features = () => {
     },
     {
       icon: <User className={style.icon} size={32} />,
-      title: "User-Centric App Experience",
+      title: "User-Centered App Experience",
       description:
         "No steep learning curve. Just smart software that works the way you do.",
       benefit: "Works Seamlessly With You",
@@ -49,10 +49,10 @@ const Features = () => {
     <section className="py-10 xl:py-20 bg-gray-950 opacity-95" id="features">
       <div className="max-w-full mx-auto xl:px-20 px-5">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-xl xl:text-4xl font-medium text-white mb-6 uppercase">
             Features & Benefits
           </h2>
-          <p className="text-xl xl:text-2xl text-white max-w-3xl mx-auto">
+          <p className="text-[16px] xl:text-xl text-white max-w-3xl mx-auto">
             Engineered for Precision, Portability, and Practical Performance
             Insight.
           </p>
@@ -65,14 +65,14 @@ const Features = () => {
               className={style.cardContent}
             >
               <div className="mb-6 group-hover:scale-100 transition-transform duration-300 flex gap-3 xl:gap-6 items-center">
-                <div className="p-1 xl:p-3 bg-gray-800 rounded-lg">
+                <div className="p-1 xl:p-3 bg-gray-600 rounded-lg">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg xl:text-2xl font-bold text-white uppercase">
+                <h3 className="text-[16px] xl:text-xl font-bold text-white uppercase">
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-white mb-4 leading-relaxed xl:text-2xl">
+              <p className="text-white mb-4 leading-relaxed xl:text-[16px]">
                 {feature.description}
               </p>
 
@@ -85,7 +85,7 @@ const Features = () => {
 
         <div className="mt-16 text-center">
           <button className={style.button}>
-            Download Technical Specifications
+            <span>Download Technical Specifications</span>
           </button>
         </div>
       </div>

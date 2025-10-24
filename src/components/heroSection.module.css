@@ -5,12 +5,12 @@
 }
 
 .anywhereAnytime {
-  @apply text-4xl md:text-4xl flex py-6 gap-6 justify-center;
+  @apply text-2xl xl:text-4xl flex py-6 gap-6 justify-center;
 }
 
 .accuracy,
 .weight {
-  @apply text-3xl font-bold text-[#e60e0e] mb-2;
+  @apply text-xl xl:text-3xl font-bold text-[#e60e0e] mb-2;
 }
 
 .contentWrapper {
@@ -18,25 +18,25 @@
 }
 
 .button {
-  @apply bg-[#e60e0e] hover:bg-red-700 text-white uppercase px-8 py-4 rounded-lg text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg;
+  @apply bg-[#e60e0e] hover:bg-red-700 text-white uppercase px-8 py-4 rounded-lg text-sm xl:text-[16px] font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg;
 }
 
 .title {
-  @apply text-5xl xl:text-7xl font-semibold mb-6 mt-40 leading-relaxed;
+  @apply text-3xl xl:text-5xl font-semibold mb-6 mt-28 xl:mt-40 leading-relaxed;
 }
 
 .description {
-  @apply text-xl xl:text-2xl mb-8 max-w-5xl mx-auto leading-relaxed text-white
+  @apply text-lg xl:text-2xl mb-8 max-w-5xl mx-auto leading-relaxed text-white;
 }
 
 .buttonWrapper {
-  @apply flex flex-col xl:flex-row gap-4 justify-center mb-12
+  @apply flex flex-col xl:flex-row gap-4 justify-center mb-12;
 }
 
 .stats {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto;
 }
 
 .text {
-  @apply text-white uppercase text-xl leading-relaxed
+  @apply text-white uppercase text-[16px] xl:text-xl leading-relaxed;
 }

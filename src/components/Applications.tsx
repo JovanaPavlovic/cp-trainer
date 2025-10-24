@@ -85,10 +85,10 @@ const Applications = () => {
     <section className={style.container} id="applications">
       <div className="max-w-full">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-xl xl:text-4xl font-medium text-white mb-6 uppercase">
             Where CP Trainer Fits In
           </h2>
-          <p className="text-xl xl:text-2xl text-white max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[16px] xl:text-xl text-white max-w-3xl mx-auto leading-relaxed">
             A user-friendly force measurement system designed for clinicians,
             sports scientists, and performance pros who demand accuracy,
             seamless data integration, and expert support.
@@ -112,7 +112,7 @@ const Applications = () => {
                   </h3>
                 </div>
 
-                <p className="text-white mb-6 xl:text-2xl leading-relaxed">
+                <p className="text-white mb-6 text-[16px] xl:text-[18px] leading-relaxed">
                   {app.description}
                 </p>
 
@@ -120,7 +120,7 @@ const Applications = () => {
                   {app.useCases.map((useCase, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-red-800 rounded-full" />
-                      <span className="text-white xl:text-2xl leading-relaxed">
+                      <span className="text-white text-sm xl:text-[16px] leading-relaxed">
                         {useCase}
                       </span>
                     </div>

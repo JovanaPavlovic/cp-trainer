@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-950 py-16 border-t border-gray-900">
       <div className="max-w-full mx-auto px-5 xl:px-20">
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 xl:gap-20 mb-12">
+        <div className="grid grid-cols-1 xl:grid-cols-[40%_30%_30%] gap-8 xl:gap-20 mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -14,10 +14,12 @@ const Footer = () => {
                 <Activity className="text-white" size={24} />
               </div> */}
               <img src={logo} alt="Logo" className="w-12 h-12" />
-              <span className="text-xl font-semibold uppercase text-white">CP Trainer</span>
+              <span className="text-sm xl:text-[16px] font-semibold uppercase text-white">
+                CP Trainer
+              </span>
             </div>
 
-            <p className="text-white mb-6 leading-relaxed xl:text-xl">
+            <p className="text-white mb-6 leading-relaxed xl:text-[16px] text-sm">
               Revolutionizing force measurement with precision, portability, and
               professional-grade reliability. Trusted by healthcare
               professionals, researchers, and sports scientists across Europe.
@@ -41,18 +43,20 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold uppercase text-white mb-6">Contact</h3>
+            <h3 className="text-sm xl:text-[16px] font-semibold uppercase text-white mb-6">
+              Contact
+            </h3>
             <div className="space-y-2">
-              <div className="flex items-center gap-3 text-white xl:text-xl leading-relaxed">
-                <Phone size={28} className={style.icon}/>
+              <div className="flex items-center gap-3 text-white text-sm xl:text-[16px] leading-relaxed">
+                <Phone size={24} className={style.icon} />
                 <span>+386 68 948 557</span>
               </div>
-              <div className="flex items-center gap-3 text-white xl:text-xl leading-relaxed">
-                <Mail size={28} className={style.icon} />
+              <div className="flex items-center gap-3 text-white text-sm xl:text-[16px] leading-relaxed">
+                <Mail size={24} className={style.icon} />
                 <span>completeperformance7@gmail.com</span>
               </div>
-              <div className="flex items-center gap-3 text-white xl:text-xl leading-relaxed">
-                <MapPin size={28} className={style.icon} />
+              <div className="flex items-center gap-3 text-white text-sm xl:text-[16px] leading-relaxed">
+                <MapPin size={24} className={style.icon} />
                 <span>Cesta na Markovec 3, Slovenia, 6000 Koper</span>
               </div>
             </div>
@@ -60,7 +64,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold uppercase text-white mb-6">Quick Links</h3>
+            <h3 className="text-sm xl:text-[16px] font-semibold uppercase text-white mb-6">
+              Quick Links
+            </h3>
             <div className="space-y-2">
               {[
                 "Product Overview",
@@ -72,7 +78,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href="#"
-                  className="block text-white hover:text-red-600 hover:underline transition-colors duration-300 xl:text-xl leading-relaxed"
+                  className="block text-white hover:text-red-600 hover:underline transition-colors duration-300 text-sm xl:text-[16px] leading-relaxed"
                 >
                   {link}
                 </a>
@@ -83,26 +89,27 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between xl:items-center gap-4">
-            <div className="text-white text-md xl:text-xl">
+          <div className="grid grid-cols-1 xl:grid-cols-[40%_30%_30%] gap-8 xl:gap-20 mb-12">
+            <div className="text-white text-sm xl:text-[16px]">
               © 2025 CP Trainer. All rights reserved. | Made in Serbia
             </div>
+            <div></div>
             <div className="flex flex-col xl:felx-row gap-2 xl:gap-6 xl:text-xl">
               <a
                 href="#"
-                className="text-white hover:text-red-700 transition-colors duration-300"
+                className="text-white hover:text-red-700 transition-colors duration-300 text-sm xl:text-[16px]"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-white hover:text-red-700 transition-colors duration-300"
+                className="text-white hover:text-red-700 transition-colors duration-300 text-sm xl:text-[16px]"
               >
                 Terms of Service
               </a>
               <a
                 href="#"
-                className="text-white hover:text-red-700 transition-colors duration-300"
+                className="text-white hover:text-red-700 transition-colors duration-300 text-sm xl:text-[16px]"
               >
                 GDPR Compliance
               </a>
