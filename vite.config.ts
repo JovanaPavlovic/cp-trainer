@@ -5,6 +5,6 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  // base: '/cp-trainer/',
-  base: "https://jovanapavlovic.github.io/cp-trainer/",
+  base: "/cp-trainer/"
+  // base: "https://jovanapavlovic.github.io/cp-trainer/",
 });
