@@ -6,7 +6,34 @@
   line-height: 1.5;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: 10px;
+  @apply bg-gray-950;
+
+  /* Hide scrollbar - Firefox */
+  /* scrollbar-width: none; */
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  /* border-color: transparent;
+  border-radius: 5px; */
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+  border-color: transparent;
+  /* border-radius: 2px; */
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600/50;
+  border-color: transparent;
+  border-radius: 2px;
+  height: 30vh;
+
+}
+
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
