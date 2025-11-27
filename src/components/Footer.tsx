@@ -49,15 +49,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-3 text-white text-sm xl:text-[16px] leading-relaxed">
                 <Phone size={24} className={style.icon} />
-                <span>+386 68 948 557</span>
+                <span>+381 63 231 193</span>
               </div>
               <div className="flex items-center gap-3 text-white text-sm xl:text-[16px] leading-relaxed">
                 <Mail size={24} className={style.icon} />
-                <span>completeperformance7@gmail.com</span>
+                <span>neotekton@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-white text-sm xl:text-[16px] leading-relaxed">
                 <MapPin size={24} className={style.icon} />
-                <span>Cesta na Markovec 3, Slovenia, 6000 Koper</span>
+                <span>Bul. Dr Zorana Đinđića 25/5, Serbia, 18000 Niš</span>
               </div>
             </div>
           </div>
