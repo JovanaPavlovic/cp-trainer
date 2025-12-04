@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 import logo from "../assets/logo_small.png";
 import style from "./footer.module.css";
 
